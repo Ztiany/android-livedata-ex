@@ -1,4 +1,4 @@
-# Lib Event Bus
+# android-simple-bug
 
 a simple event bus implementation by kotlin coroutines.
 
