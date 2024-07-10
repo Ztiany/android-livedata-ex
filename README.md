@@ -1,5 +1,5 @@
 # android-livedata-ex
 
 ```groovy
-implementation "com.github.Ztiany:livedata-ex:1.0.0"
+implementation "com.github.Ztiany:livedata-ex:1.0.1"
 ```
