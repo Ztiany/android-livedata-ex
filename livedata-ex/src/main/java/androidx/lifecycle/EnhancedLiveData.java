@@ -35,7 +35,7 @@ public class EnhancedLiveData<T> extends LiveData<T> {
     }
 
     @Override
-    public void setValue(T value) {
+    protected void setValue(T value) {
         mVersion++;
         super.setValue(value);
     }
