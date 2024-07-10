@@ -1,10 +1,5 @@
-# android-simple-bug
-
-a simple event bus implementation by kotlin coroutines.
-
-installation:
+# android-livedata-ex
 
 ```groovy
-// https://mvnrepository.com/artifact/io.github.ztiany/android-simple-bus
-implementation 'io.github.ztiany:android-simple-bus:1.0.0'
+implementation "com.github.Ztiany:livedata-ex:1.0.0"
 ```

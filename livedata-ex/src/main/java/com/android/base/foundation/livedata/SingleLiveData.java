@@ -3,7 +3,7 @@ package com.android.base.foundation.livedata;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.MediatorLiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 import timber.log.Timber;
 
-public class SingleLiveData<T> extends MediatorLiveData<T> {
+public class SingleLiveData<T> extends MutableLiveData<T> {
 
     private int mVersion = 0;
 

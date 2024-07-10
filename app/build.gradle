@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdk 31
 
     defaultConfig {
         applicationId "me.ztiany.simple.bus.example"
@@ -39,5 +39,5 @@ dependencies {
 
     implementation "com.jakewharton.timber:timber:4.7.1"
 
-    implementation project(':lib_event_bus')
+    implementation project(':livedata-ex')
 }
