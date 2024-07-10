@@ -18,6 +18,14 @@ public class SingleLiveData<T> extends MutableLiveData<T> {
 
     private final List<ObserverWrapper<? super T>> mWrapperObserverList = new ArrayList<>();
 
+    public SingleLiveData(T value) {
+        super(value);
+    }
+
+    public SingleLiveData() {
+        super();
+    }
+
     @Override
     public void setValue(T value) {
         mVersion++;
@@ -26,12 +34,12 @@ public class SingleLiveData<T> extends MutableLiveData<T> {
 
     @Override
     public void observe(@NonNull LifecycleOwner owner, @NonNull Observer<? super T> observer) {
-        super.observe(owner, getOrNewObserver(observer, mVersion));
+        super.observe(owner, getOrNewWrappedObserver(observer, mVersion));
     }
 
     @Override
     public void observeForever(@NonNull Observer<? super T> observer) {
-        super.observeForever(getOrNewObserver(observer, mVersion));
+        super.observeForever(getOrNewWrappedObserver(observer, mVersion));
     }
 
     @Override
@@ -41,7 +49,7 @@ public class SingleLiveData<T> extends MutableLiveData<T> {
         mWrapperObserverList.remove(wrapper);
     }
 
-    private ObserverWrapper<? super T> getOrNewObserver(@NonNull Observer<? super T> observer, int observerVersion) {
+    private ObserverWrapper<? super T> getOrNewWrappedObserver(@NonNull Observer<? super T> observer, int observerVersion) {
         ObserverWrapper<? super T> wrapper = findWrapper(observer);
 
         if (wrapper == null) {

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    compileSdk 34
+    compileSdk 31
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 34
+        minSdk 21
+        targetSdk 31
     }
 
     lintOptions {
@@ -50,7 +50,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'io.github.ztiany'
                 artifactId = 'livedata-ex'
-                version = '1.0.0'
+                version = '1.0.1'
             }
         }
     }

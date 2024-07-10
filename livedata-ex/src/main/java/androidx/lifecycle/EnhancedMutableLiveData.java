@@ -2,12 +2,12 @@ package androidx.lifecycle;
 
 public class EnhancedMutableLiveData<T> extends EnhancedLiveData<T> {
 
-    public EnhancedMutableLiveData(T value) {
-        super(value);
+    public EnhancedMutableLiveData(boolean asSingleLiveData, T value) {
+        super(asSingleLiveData, value);
     }
 
-    public EnhancedMutableLiveData() {
-        super();
+    public EnhancedMutableLiveData(boolean asSingleLiveData) {
+        super(asSingleLiveData);
     }
 
     @Override

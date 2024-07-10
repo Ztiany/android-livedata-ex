@@ -11,6 +11,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Timber.plant(DebugTree())
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction().add(R.id.act_frag_container, AFragment()).commit()
+        }
     }
 
 }
