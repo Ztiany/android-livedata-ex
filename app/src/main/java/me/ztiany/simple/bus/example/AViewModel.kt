@@ -1,6 +1,7 @@
 package me.ztiany.simple.bus.example
 
 import androidx.lifecycle.EnhancedLiveData
+import androidx.lifecycle.EnhancedMutableLiveData
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,8 +13,8 @@ class AViewModel : ViewModel() {
 
     private val _normalLiveData = MutableLiveData("NormalLiveData-1")
     private val _singleLiveData = SingleLiveData("SingleLiveData-2")
-    private val _enhancedLiveData = EnhancedLiveData(false, "EnhancedLiveData-1")
-    private val _singleEnhancedLiveData = EnhancedLiveData(true, "SingleEnhancedLiveData-1")
+    private val _enhancedLiveData = EnhancedMutableLiveData(false, "EnhancedLiveData-1")
+    private val _singleEnhancedLiveData = EnhancedMutableLiveData(true, "SingleEnhancedLiveData-1")
 
     val normalLiveData: LiveData<String>
         get() = _normalLiveData
