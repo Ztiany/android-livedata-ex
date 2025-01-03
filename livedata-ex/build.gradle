@@ -47,11 +47,11 @@ mavenPublishing {
     signAllPublications()
 
     // configuring the pom
-    coordinates("io.github.ztiany", "android-livedata-ex", "1.0.2")
+    coordinates("io.github.ztiany", "android-livedata-ex", "2.0.0")
 
     pom {
         name = "android-livedata-ex"
-        description = "An android library makes http requesting easy."
+        description = "Useful extensions for LiveData."
         inceptionYear = "2020"
         url = "https://github.com/Ztiany/android-livedata-ex/"
         licenses {
